@@ -8,8 +8,8 @@ phases:
      # - /root/.pyenv/versions/3.9.16/bin/python3.9 -m pip install --upgrade pip
       # Verify AWS CLI Version   
       - aws --version
-      - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 468085339621.dkr.ecr.ap-south-1.amazonaws.com
-      - REPOSITORY_URI=468085339621.dkr.ecr.ap-south-1.amazonaws.com/python-app
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 860597918607.dkr.ecr.us-east-1.amazonaws.com
+      - REPOSITORY_URI=860597918607.dkr.ecr.us-east-1.amazonaws.com/pythoncode-eks
       - IMAGE_TAG=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       # Update Image tag in our Kubernetes Deployment Manifest        
       - echo "Update Image tag in kube-manifest..."
